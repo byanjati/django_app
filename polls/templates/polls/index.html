@@ -1,0 +1,11 @@
+{% if questions %}
+    <ul>
+        {% for question in questions %}
+            <li>
+                <a href="/polls/{{ question.id }}"> {{ question.question_text }} </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p> None of question asked </p>
+{% endif %}
